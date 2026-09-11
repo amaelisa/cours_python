@@ -1,17 +1,24 @@
-#1. texte (String) toujours en guillemets
-nom = "Amaboua"
-role = "Future Ingenieur en Genie Logiciel"
+#1. interagir avec l'utilisateur
+nom_utilisateur = input("Quel est ton prenom ? ")
+print("Enchante(e)", nom_utilisateur, "! Bienvenue dans ton programme python.")
 
-#2. Nombre entier (Integer) sans guillemets
-age = 21
+#2. conversion de texte en nombre (int)
+age_saisi = input("Quel est votre age ? ")
+age = int(age_saisi)
 
-#3. Nombre a virgule (float) utilise un point pas une virgule 
-note_moyenne = 16.5
+#3. Prise de decision (if / elif/ else)
+if age < 18:
+    print("Tu es mineur(e). Bon courage pour les etudes !")
+elif age >= 18 and age < 25:
+    print("Tu es dans la tranche d'age ideale pour reussir ton stage et ton memoire !")
+else:
+    print("Bienvenue dans le monde professionnel !")
+    
+#4. Excercie : Question Oui \ Non 
+reponse = input("Aimes-tu le developpement web ? (oui/non) : ")
 
-#4. Booleen(Boolean) est vrai ou faux (True / Flase avec majuscule)
-est_etudiante = True
+if reponse.lower() == "oui":
+    print("super On va concevoir de superbes API avec Python et FastApi !")
 
-# afficher les informations dans la console
-print("bonjour, je m'appelle", nom)
-print("mon role :", role)
-print("age", 21, "ans")
+else:
+    print("Ne t'inquietes pas, tu vas u=y prendre gout tres vite !")
